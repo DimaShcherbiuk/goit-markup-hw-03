@@ -12,14 +12,17 @@ h4,
 h5,
 h6 {
   margin: 0;
+  padding: 0;
 }
 
 p {
   margin: 0;
+  padding: 0;
 }
 
 ul {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
   list-style-type: none;
 }
@@ -29,12 +32,17 @@ img {
 }
 
 .container {
-  display: flex;
   max-width: 1128px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Header */
@@ -45,12 +53,6 @@ img {
   width: 1440px;
   height: 72px;
   flex-shrink: 0;
-}
-
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .logo {
@@ -140,6 +142,7 @@ img {
 }
 
 .box-hero {
+    display: flex;
   background: #2e2f42;
   width: 1440px;
   height: 600px;
@@ -163,6 +166,7 @@ img {
   font-size: 16px;
   line-height: 1.5em;
   letter-spacing: 0.04em;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -186,6 +190,26 @@ img {
   overflow: hidden;
 }
 
+.box-advant {
+    display: flex;
+    width: 1128px;
+    height: 104px;
+    flex-shrink: 0;
+}
+
+.box-advant-list {
+    display: flex;
+    gap: 24px;
+}
+
+.box-advant-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: calc((100% - 72px) / 4);
+}
+
 .box-advant-title {
   color: #2e2f42;
   font-size: 20px;
@@ -202,7 +226,11 @@ img {
 
 /* Section 2 */
 .box-team {
+    display: flex;
   background: #f4f4fd;
+width: 1440px;
+    height: 732px;
+    flex-shrink: 0;
 }
 
 .box-team-title {
@@ -213,6 +241,10 @@ img {
   line-height: 1.11;
   letter-spacing: 0.72px;
   text-transform: capitalize;
+}
+
+.box-team-list {
+    display: flex;
 }
 
 .box-team-foto {
@@ -235,6 +267,13 @@ img {
 
 /* Section 3 */
 
+.box-portf {
+    display: flex;
+    width: 1128px;
+        height: 1000px;
+        flex-shrink: 0;
+}
+
 .box-portf-title {
   text-align: center;
   color: #2e2f42;
@@ -245,11 +284,22 @@ img {
   text-transform: capitalize;
 }
 
+.container-portf {
+    width: 1440px;
+    height: 732px;
+    flex-shrink: 0;
+}
+
 .box-portf-list {
 display: flex;
 flex-wrap: wrap;
 gap: 16px;
-  width: calc((100% - 48px) / 3);
+margin: 0;
+padding: 0;
+}
+
+.box-portf-list .box-portf-product {
+    width: 360;
 }
 
 .box-portf-product {
@@ -257,6 +307,7 @@ gap: 16px;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
+width: calc((100% - 48px) / 3);
 }
 
 .name-product {
